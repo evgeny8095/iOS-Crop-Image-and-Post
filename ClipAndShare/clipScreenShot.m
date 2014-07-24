@@ -25,7 +25,7 @@
     }
     UIImage *screenshot = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    [saveImageToFile saveImage:screenshot];
+    
     /* Clip the image to the selected rectangle */
         // The x, y, width, and height values should be based on a non retina view and the
         // screenScale multiplier will adjust the clipRegion's size according to the resolution
@@ -50,7 +50,6 @@
     CGImageRef ref = screenshot.CGImage;
     CGImageRef mySubimage = CGImageCreateWithImageInRect (ref, clipRegion);
     UIImage *clippedScreenshot = [UIImage imageWithCGImage:mySubimage];
-    [saveImageToFile saveImage:clippedScreenshot];
     
     /* --OPTIONAL--
      Give the clipped image rounded corners*/
