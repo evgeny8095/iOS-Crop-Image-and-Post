@@ -12,22 +12,20 @@
 +(UIImage *)clipResultsImageFrom:(UIView *)main{
     
     /* Obtains Screen Dimensions*/
-    CGRect screenBounds = [[UIScreen mainScreen] bounds];
     CGFloat screenScale = [[UIScreen mainScreen] scale];
-    CGSize screenSize = CGSizeMake(screenBounds.size.width * screenScale, screenBounds.size.height * screenScale);
-    screenBounds.size = screenSize;
-    screenBounds.origin = CGPointZero;
+    CGSize screenSize = CGSizeMake(main.frame.size.height * screenScale,main.frame.size.width * screenScale);
+    CGRect screenBounds = CGRectMake(0, 0, main.frame.size.height, main.frame.size.width);
     
     /* Capture the screenshot of entire view */
     UIGraphicsBeginImageContextWithOptions(screenSize, YES, 0.0);
-    if ([main drawViewHierarchyInRect:main.frame afterScreenUpdates:YES]){
+    if ([main drawViewHierarchyInRect:screenBounds afterScreenUpdates:YES]){
         NSLog(@"Successfully draw the screenshot.");
     } else {
         NSLog(@"Failed to draw the screenshot.");
     }
     UIImage *screenshot = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    
+    [saveImageToFile saveImage:screenshot];
     /* Clip the image to the selected rectangle */
         // The x, y, width, and height values should be based on a non retina view and the
         // screenScale multiplier will adjust the clipRegion's size according to the resolution
@@ -40,7 +38,7 @@
         clipRegion = CGRectMake(137*screenScale, 158*screenScale, 532*screenScale, 473*screenScale);
     } else {
         // Check the height to width ratio to determine screen size
-        if (screenBounds.size.height/screenBounds.size.width > 1.5f) {
+        if (main.frame.size.height/main.frame.size.width > 1.5f) {
             // clipRegion for 4 inch devices
             clipRegion = CGRectMake(137*screenScale, 158*screenScale, 532*screenScale, 473*screenScale);
         } else {
@@ -52,6 +50,7 @@
     CGImageRef ref = screenshot.CGImage;
     CGImageRef mySubimage = CGImageCreateWithImageInRect (ref, clipRegion);
     UIImage *clippedScreenshot = [UIImage imageWithCGImage:mySubimage];
+    [saveImageToFile saveImage:clippedScreenshot];
     
     /* --OPTIONAL--
      Give the clipped image rounded corners*/
