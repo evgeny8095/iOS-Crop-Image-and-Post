@@ -26,6 +26,7 @@
 		8064AF13197E5F7C00FAA72F /* Reward Screen (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 8064AF10197E5F7C00FAA72F /* Reward Screen (1).png */; };
 		8064AF14197E5F7C00FAA72F /* twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 8064AF11197E5F7C00FAA72F /* twitter.png */; };
 		8064AF15197E5F7C00FAA72F /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 8064AF12197E5F7C00FAA72F /* facebook.png */; };
+		807B60891987A8730084BCBA /* NanoNanoIPhoneScoreboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 807B60881987A8730084BCBA /* NanoNanoIPhoneScoreboard.png */; };
 		80A9189E197F75F200BDE7D9 /* clipScreenShot.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A9189D197F75F200BDE7D9 /* clipScreenShot.m */; };
 		80A918A4197F912F00BDE7D9 /* saveImageToFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A918A3197F912F00BDE7D9 /* saveImageToFile.m */; };
 		80A918A7197FACB900BDE7D9 /* roundUIImageCorners.m in Sources */ = {isa = PBXBuildFile; fileRef = 80A918A6197FACB900BDE7D9 /* roundUIImageCorners.m */; };
@@ -67,6 +68,7 @@
 		8064AF10197E5F7C00FAA72F /* Reward Screen (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Reward Screen (1).png"; sourceTree = "<group>"; };
 		8064AF11197E5F7C00FAA72F /* twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter.png; sourceTree = "<group>"; };
 		8064AF12197E5F7C00FAA72F /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = facebook.png; sourceTree = "<group>"; };
+		807B60881987A8730084BCBA /* NanoNanoIPhoneScoreboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NanoNanoIPhoneScoreboard.png; sourceTree = "<group>"; };
 		80A9189C197F75F200BDE7D9 /* clipScreenShot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = clipScreenShot.h; sourceTree = "<group>"; };
 		80A9189D197F75F200BDE7D9 /* clipScreenShot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = clipScreenShot.m; sourceTree = "<group>"; };
 		80A918A2197F912F00BDE7D9 /* saveImageToFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = saveImageToFile.h; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 		8064AEDD197E5E9100FAA72F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				807B60881987A8730084BCBA /* NanoNanoIPhoneScoreboard.png */,
 				8064AF10197E5F7C00FAA72F /* Reward Screen (1).png */,
 				8064AF11197E5F7C00FAA72F /* twitter.png */,
 				8064AF12197E5F7C00FAA72F /* facebook.png */,
@@ -269,6 +272,7 @@
 				8064AF15197E5F7C00FAA72F /* facebook.png in Resources */,
 				8064AF14197E5F7C00FAA72F /* twitter.png in Resources */,
 				8064AEE1197E5E9100FAA72F /* InfoPlist.strings in Resources */,
+				807B60891987A8730084BCBA /* NanoNanoIPhoneScoreboard.png in Resources */,
 				8064AF13197E5F7C00FAA72F /* Reward Screen (1).png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
